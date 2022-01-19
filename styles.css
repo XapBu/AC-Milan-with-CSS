@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* * { /звездочка обозначает что эти значения для всех данных
+    padding: 0;
+    margin: 0;
+} */ 
+
+body {
+    background-color: rgb(235, 70, 70);
+    color: rgb(19, 18, 18);
+
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Roboto', sans-serif;
+
+    /* font: normal 16px 'Roboto', sans-serif; */
+
+    /* font-family:'Times New Roman', Times, serif */
+}
+
+a {
+    color: rgb(15, 15, 15);
+    text-decoration: none; /* чтобы ссылки не были подчеркнуты */
+}
+
+a:hover { /* при наведении на ссылку добавляет подчеркивание */
+    text-decoration: underline;
+} 
+
+a:active {
+    color: green; /* при нажатии но без отпускания, цвет ссылки будет зеленым */
+}
+
+a:visited {
+    color: rgb(222, 236, 236); /* ссылки которые мы посещали уже будут бледно-бирюзовые */
+}
+
+.avatar {
+    width: 250px;
+    border-radius: 50%; /* можно и размер 28px поставить */
+    box-shadow: 4px 4px 14px rgba(0 0 0 / 25);
+}
+
+.info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info-text {
+    margin-left: 40px;
+}
+
+.info-text h4 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #161f30;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    /* text-transform: capitalize; */
+    /* letter-spacing: 15px; */
+    /* word-spacing: 42px; */
+}
+
+/* Box Model - его можно посмотреть наглядно в "посмотреть код" на сайте, листая Styles в самый низ */ 
+.container {
+    max-width: 750px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/*.social {
+    background: rgb(179, 73, 73); */
+    /* padding: 45px;  внутреннее отступление текста от краев табличку */
+   /* padding: 15px 40px; /* 15 сверху и снизу и по бокам по 40 пикселей, так можно задавать значниея по всем 4-м сторонам, а также отдельно для каждой если захочет с помощью команд padding-left и т.д. */
+    /* margin: 30px; /* уменьшает нашу табличку соц сетей */
+    /* border: 10px solid rebeccapurple; 
+    border-bottom-style: dotted; /* нижняя часть таблицы "в точечку" */
+    /*border-top-width: 20px;
+    border-right-color: blue;
+    border-right-width: 20px;
+} */
+
+/*
+.box-model > div {
+    float: left;
+    background: #000;
+    height: 200px;
+    border: 4px solid red;
+    width: 25%;
+     теперь когда добавлен border 4 квадрата не вмещаются в одну строку, поэтому можно добавить следующую команду:
+    box-sizing: border-box;
+} */
+
+.bg-yellow {
+    background: #e7c51a;
+}
+
+.bg-green {
+    background: #52df5e;
+}
+
+.bg-red {
+    background: #ffe5e5;
+}
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0px 30px;
+}
+
+.list li {
+    color: #221d3ad7;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2), td:nth-child(3) { /* псевдо селектор */
+    color: #4a4b4e;
+}
+
+/* .table tr:nth-child(even) { 
+    color: red;
+}  каждая четная строка будет красная */
+
+.link-list {
+    list-style: none;
+    padding: 0%;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    /* padding-bottom: 5px; */
+    border-bottom: 1px solid rgb(100, 94, 94);
+}
+
+.link-list li a {
+    color: rgb(34, 87, 233);
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    color: #18191a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: rgb(247, 195, 195); /* прозрачный */
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    color: #000;
+    padding: 15px 5px 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > .form-group {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child {
+    margin-right: 0;
+}
+
+.btn {
+    background: #111;
+    padding: 15px 20px;
+    color: red;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Position */
+
+/* .position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 20px;
+    border-radius: 0;
+     left: 0; 
+    width: 100%;
+    height: 50px;
+    background: lightcoral;
+} */
